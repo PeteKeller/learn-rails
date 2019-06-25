@@ -7,6 +7,10 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 
+# Specifies the network address that Puma will listen in on to recive requests: default is 127.0.0.1
+# Must come BEFORE defining the port
+set_default_host '10.1.11.250'
+
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
 port        ENV.fetch("PORT") { 3000 }
